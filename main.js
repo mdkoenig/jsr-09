@@ -1,8 +1,6 @@
 /**
     Travel the World: Redux
 
-    (You may have done the first part of this homework before; feel free to reuse your Lesson 8 code)
-
     1. Use an event handler to store the <select> menu's selected option in variables for each of the 3 parts:
         • Country name
         • Country currency code
