@@ -13,3 +13,31 @@
 .inline {
 	display: inline;
 }
+
+#map {
+        height: 600px;
+        width: 800px;
+}
+
+#container {
+	margin: auto;
+    width: 75%;
+    border: 3px solid #55016A;
+    padding: 10px;
+    background-color:#B0B0B0;
+}
+
+h1 {
+	text-align: center;
+}
+
+#map {
+	margin: 10px auto 10px auto;
+}
+
+body {
+	background-image: url("images/01-small.jpg");
+	background-repeat: no-repeat;
+	background-position: center 10px;
+	margin-top: 10px;
+}
