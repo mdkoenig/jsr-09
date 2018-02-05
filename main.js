@@ -66,6 +66,7 @@ $("#reset").on("click", function() {
         hide("go-there");
         hide("congrats");
         hide("reset");
+        hide("map");
         unHide("countryCodes");
         unHide("select");
 });
@@ -97,7 +98,6 @@ function hide (id)
 
 function weather()
 {
-    //var root = 'http://api.openweathermap.org/data/2.5/weather?q=Budapest,Hungry&appid=d2ee09f962bfb4252c8ec8566fa1b91c';
     var root = "http://api.openweathermap.org/data/2.5/weather?q=";
     var appId = "&appid=d2ee09f962bfb4252c8ec8566fa1b91c";
 
@@ -105,25 +105,25 @@ function weather()
         url: root + capital + "," + country + appId,
         method: 'GET'
     }).then(function(data) {
-        //console.log(data);
-        ////console.log(data.temp);
-        //console.log(data.weather[0].main);
-        //console.log(data.weather[0].description);
-        //$("#congrats")[0].after('<p>' + data.weather[0].description + '</p>');
-        //var description = data.weather[0].description; //.addClass('gotta-be')
-        //console.log(description);
+        console.log(data);
+        var longNum = data.coord.lon;
+        var latNum = data.coord.lat;
         var text1 = $("<p></p>").text("The weather in " + capital + ", " + country + " is " + data.weather[0].description);
-        //var weather = data.weather[0].description;
-        //console.log(typeof weather);
-        //console.log(weather);
-        //console.log(text1[0].innerHTML);
-        //text1[0].innerHTML = text1[0].innerHTML + " " + data.weather[0].description;
-        
-
-        // var text1 = $("<p></p>").text(data.weather[0].description);
-
-
         $("#congrats").append(text1);
+        initMap(latNum,longNum);
     });
     // icon - http://openweathermap.org/img/w/02n.png
+}
+
+var map;
+
+function initMap(latNum,longNum) 
+{
+    unHide("map","block");
+    var latNum = latNum;
+    var longNum = longNum;
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: latNum, lng: longNum},
+        zoom: 8
+    });
 }
