@@ -9,7 +9,7 @@
 
   <h2>First, convert your currency from Euros!</h2>
 
-  <select id="countryCodes">
+  <select id="countryCodes" class="inline">
     <option id="AUD" name="Australia">Australian Dollar</option>
     <option id="BGN" name="Bulgaria">Bulgarian Lev</option>
     <option id="BRL" name="Brazil">Brazilian Real</option>
@@ -42,11 +42,15 @@
     <option id="USD" name="United States">US Dollar</option>
   </select>
 
+  <button id="select" class="inline">Select currency</button>
+
   <p id="exchange" class="hidden">The exchange rate is 1 Euro to</p>
 
-  <button class="hidden">Would you like to go there?</button>
+  <button id="go-there" class="hidden">Would you like to go there?</button>
 
   <p id="congrats" class="hidden">Congratuations! You're on your way to</p>
+
+  <button id="reset" class="hidden">Reset</button> 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="main.js" type="text/javascript" charset="utf-8" async defer></script>
