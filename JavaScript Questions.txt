@@ -1,0 +1,19 @@
+Works as expected
+
+$("#go-there").on("click", function() {unHide("congrats")});
+
+Is automatically called
+
+$("#go-there").on("click", unHide("congrats"));
+
+--------------------
+
+<p id="exchange" class="hidden">The exchange rate is 1 Euro to</p>
+
+$("#exchange")[0].className = "visible";
+
+Do we need to call the first element in an array because JQuery creates an array with the "normal" object as the first element and all the JQuery stuff as the second element?  Is there a better way to do this?
+
+--------------------
+
+https://samples.openweathermap.org/data/2.5/weather?q=London,uk&appid=d2ee09f962bfb4252c8ec8566fa1b91c&callback=jQuery33103867121757626055_1517787341778&_=1517787341779

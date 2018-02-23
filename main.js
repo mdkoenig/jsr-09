@@ -29,8 +29,14 @@ $(document).ready(background());
 
 function background()
 {
+    var oldBackground = document.body.style.backgroundImage;
     var backgroundNum = Math.ceil(Math.random()*8);
-    var background = "url('images/0" + backgroundNum + "-small.jpg')";
+    var background = 'url("images/0' + backgroundNum + '-small.jpg")';
+    while(oldBackground === background)
+    {
+        var backgroundNum = Math.ceil(Math.random()*8);
+        var background = "url('images/0" + backgroundNum + "-small.jpg')";
+    }
     document.body.style.backgroundImage = background;
 }
 

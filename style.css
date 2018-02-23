@@ -20,7 +20,7 @@
 }
 
 #container {
-	margin: auto;
+	margin: 30px auto 10px auto;
     width: 75%;
     border: 3px solid #55016A;
     padding: 10px;
